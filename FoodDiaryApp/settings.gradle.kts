@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "FoodDiaryApp"
 include(":app")
+include(":build-logic")
+include(":core")
+include(":feature")
