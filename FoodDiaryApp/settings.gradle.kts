@@ -12,6 +12,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
@@ -27,12 +28,12 @@ includeBuild("build-logic")
 // Core module submodules
 include(":core:data")
 include(":core:datastore")
-//include(":core:domain")
+include(":core:domain")
 include(":core:designsystem")
-//include(":core:model")
-//include(":core:navigation")
+include(":core:model")
+include(":core:navigation")
+include(":core:ui")
 //include(":core:testing")
-//include(":core:ui")
 
 // Feature module submodules
 //include(":feature:onboarding")
@@ -40,5 +41,6 @@ include(":core:designsystem")
 //include(":feature:record")
 //include(":feature:report")
 //include(":feature:profile")
+
 
 

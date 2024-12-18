@@ -24,6 +24,16 @@ android {
 }
 
 dependencies {
+    // Core modules
+//    implementation(project(":core:designsystem"))
+//    implementation(project(":core:data"))
+//    implementation(project(":core:datastore"))
+//    implementation(project(":core:domain"))
+//    implementation(project(":core:model"))
+//    implementation(project(":core:navigation"))
+//    implementation(project(":core:ui"))
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

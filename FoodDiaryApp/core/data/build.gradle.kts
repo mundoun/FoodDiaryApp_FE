@@ -19,7 +19,8 @@ dependencies {
     implementation(libs.okhttp.logging)
 
     // JSON
-    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.converter.gson)  // Gson 컨버터 사용 또는
+    implementation(libs.retrofit2.kotlin.serialization.converter)  // 최신 버전의 Kotlin Serialization 컨버터 사용
 
     // Local Database
     implementation(libs.room.runtime)
