@@ -3,6 +3,9 @@ buildscript {
         google()
         mavenCentral()
     }
+    dependencies {
+        classpath(libs.hilt.android.gradle.plugin)  // 이름이 일치하는지 확인
+    }
 }
 
 plugins {
@@ -11,6 +14,7 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.ksp) apply false
 }
 
 // 공통 설정은 이제 build-logic의 Convention 플러그인들이 처리하므로
