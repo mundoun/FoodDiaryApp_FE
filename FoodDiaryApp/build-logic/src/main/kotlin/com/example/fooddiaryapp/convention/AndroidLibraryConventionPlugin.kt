@@ -1,3 +1,5 @@
+package com.example.fooddiaryapp.convention
+
 import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project

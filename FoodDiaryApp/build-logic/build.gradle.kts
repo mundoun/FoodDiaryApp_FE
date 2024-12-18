@@ -9,7 +9,6 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-
 dependencies {
     compileOnly("com.android.tools.build:gradle:8.2.0")
     compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.21")
@@ -19,19 +18,19 @@ gradlePlugin {
     plugins {
         register("androidApplication") {
             id = "fooddiaryapp.android.application"
-            implementationClass = "AndroidApplicationConventionPlugin"
+            implementationClass = "com.example.fooddiaryapp.convention.AndroidApplicationConventionPlugin"
         }
         register("androidLibrary") {
             id = "fooddiaryapp.android.library"
-            implementationClass = "AndroidLibraryConventionPlugin"
+            implementationClass = "com.example.fooddiaryapp.convention.AndroidLibraryConventionPlugin"
         }
         register("androidCompose") {
             id = "fooddiaryapp.android.compose"
-            implementationClass = "AndroidComposeConventionPlugin"
+            implementationClass = "com.example.fooddiaryapp.convention.AndroidComposeConventionPlugin"
         }
         register("androidHilt") {
             id = "fooddiaryapp.android.hilt"
-            implementationClass = "AndroidHiltConventionPlugin"
+            implementationClass = "com.example.fooddiaryapp.convention.AndroidHiltConventionPlugin"
         }
     }
 }
