@@ -1,5 +1,6 @@
 [versions]
 agp = "8.2.0"  # 실제 안정 버전으로 수정
+datastorePreferences = "1.1.1"
 hiltAndroidGradlePlugin = "2.51.1"
 kotlin = "1.9.20"  # Compose와 호환되는 버전으로 수정
 coreKtx = "1.12.0"
@@ -24,6 +25,7 @@ datastore = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-datastore-preferences-v111 = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

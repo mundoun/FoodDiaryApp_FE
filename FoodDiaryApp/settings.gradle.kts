@@ -26,7 +26,7 @@ includeBuild("build-logic")
 
 // Core module submodules
 include(":core:data")
-//include(":core:datastore")
+include(":core:datastore")
 //include(":core:domain")
 include(":core:designsystem")
 //include(":core:model")
@@ -40,4 +40,5 @@ include(":core:designsystem")
 //include(":feature:record")
 //include(":feature:report")
 //include(":feature:profile")
+
 
