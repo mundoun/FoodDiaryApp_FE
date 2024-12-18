@@ -10,6 +10,7 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
@@ -36,7 +37,7 @@ include(":core:ui")
 //include(":core:testing")
 
 // Feature module submodules
-//include(":feature:onboarding")
+include(":feature:onboarding")
 //include(":feature:home")
 //include(":feature:record")
 //include(":feature:report")

@@ -1,7 +1,7 @@
 plugins {
     id("fooddiaryapp.android.library")
-    id("fooddiaryapp.android.hilt")
-    alias(libs.plugins.ksp)  // KSP 플러그인을 이렇게 직접 적용
+    alias(libs.plugins.ksp)
+    kotlin("plugin.serialization") version "1.9.20"  // Kotlin Serialization 플러그인 추가
 }
 
 android {
@@ -9,18 +9,19 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:model"))
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
+    testImplementation(libs.kotlinx.coroutines.test)
 
-    // Network
+    // Network & Retrofit
     implementation(libs.retrofit.core)
-    implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.converter.gson)  // Gson converter로 변경
     implementation(libs.okhttp.logging)
 
-    // JSON
-    implementation(libs.converter.gson)  // Gson 컨버터 사용 또는
-    implementation(libs.retrofit2.kotlin.serialization.converter)  // 최신 버전의 Kotlin Serialization 컨버터 사용
+    // Kotlin Serialization
+    implementation(libs.kotlinx.serialization.json)
 
     // Local Database
     implementation(libs.room.runtime)
@@ -30,7 +31,6 @@ dependencies {
     // DataStore
     implementation(libs.androidx.datastore)
 
-    // Test
+    // Testing
     testImplementation(libs.junit)
-    testImplementation(libs.kotlinx.coroutines.test)
 }
