@@ -5,36 +5,22 @@ buildscript {
     }
 }
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules
 plugins {
+    // 기존 플러그인은 커스텀 플러그인에서 적용하므로 제거해도 됩니다
+    // 하지만 다른 모듈에서 참조할 수 있도록 false로 유지
     alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
     alias(libs.plugins.kotlin.android) apply false
 }
 
-// Common configuration for all modules
+// 공통 설정은 이제 build-logic의 Convention 플러그인들이 처리하므로
+// 여기서는 제거할 수 있습니다.
+// 단, Convention 플러그인에서 처리하지 않는 추가 설정만 여기에 유지합니다.
 subprojects {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
         kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_17.toString()
-            // Treat all Kotlin warnings as errors
+            // Treat all Kotlin warnings as errors (선택적)
             allWarningsAsErrors = true
-        }
-    }
-
-    // Configure Android specific options for Android modules
-    plugins.withId("com.android.base") {
-        configure<com.android.build.gradle.BaseExtension> {
-            compileSdkVersion(34) // 최신 Android SDK 버전 사용
-
-            defaultConfig {
-                minSdk = 24 // 일반적인 최소 SDK 버전
-                targetSdk = 34 // 최신 Android SDK 버전 사용
-            }
-
-            compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_17
-                targetCompatibility = JavaVersion.VERSION_17
-            }
         }
     }
 }

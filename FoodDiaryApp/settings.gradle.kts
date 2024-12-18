@@ -22,6 +22,8 @@ include(":app")
 include(":core")
 include(":feature")
 
+includeBuild("build-logic")
+
 // Core module submodules
 //include(":core:data")
 //include(":core:datastore")
