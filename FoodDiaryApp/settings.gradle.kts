@@ -45,5 +45,6 @@ include(":feature:onboarding")
 
 
 include(":feature:home")
-include(":feature:record")
 include(":feature:report")
+include(":feature:home:record")
+include(":feature:home:foodsearch")
