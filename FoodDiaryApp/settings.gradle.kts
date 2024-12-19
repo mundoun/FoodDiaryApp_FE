@@ -46,3 +46,4 @@ include(":feature:onboarding")
 
 include(":feature:home")
 include(":feature:record")
+include(":feature:report")
