@@ -44,4 +44,5 @@ include(":feature:onboarding")
 //include(":feature:profile")
 
 
-
+include(":feature:home")
+include(":feature:record")
