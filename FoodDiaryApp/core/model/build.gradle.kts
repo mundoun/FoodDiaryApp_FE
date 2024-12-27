@@ -8,7 +8,7 @@ android{
 
 dependencies {
     // Kotlin DateTime
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
+    implementation(libs.kotlinx.datetime)
 
     // Testing
     testImplementation(libs.junit)
